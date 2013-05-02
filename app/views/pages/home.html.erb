@@ -1,9 +1,14 @@
+<% if user_signed_in? %>
+<h1>You're logged in to Anchor!</h1>
+<% else %>
+
 <div class="hero-unit">
 	<h1>Welcome!</h1>
 	<p>
 		You found the home page of a project that belongs to <%= link_to "Anchor Media Solutions", "http://www.anchormediasolutions.com"%> and <%= link_to "Blake Snodgrass", "http://www.facebook.com/blakesnodgrass"%>
 	</p>
 	<p>
-		<%= link_to "Sign Up Now!", "#", class: "but btn-primary btn-large" %>
+		<%= link_to "Sign Up Now!", new_user_registration_path, class: "but btn-primary btn-large" %>
 	</p>
 </div>
+<% end %>
